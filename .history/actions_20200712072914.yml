@@ -1,0 +1,5 @@
+name: 'PR Code Coverage Report Action'
+description: 'PR Code Coverage Report Action'
+runs:
+  using: 'node12'
+  main: 'index.js'

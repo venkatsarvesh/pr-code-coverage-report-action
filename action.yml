@@ -1,0 +1,15 @@
+name: 'PR Code Coverage Report Action'
+description: 'PR Code Coverage Report Action'
+inputs:
+  github-token:
+    description: Github token
+    required: true
+  lcov-file:
+    description: The location of the lcov.info file
+    required: false
+  lcov-base:
+    description: The location of the lcov file for the base branch
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

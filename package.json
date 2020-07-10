@@ -1,0 +1,29 @@
+{
+  "name": "pr-code-coverage-report-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatsarvesh/pr-code-coverage-report-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venkatsarvesh/pr-code-coverage-report-action/issues"
+  },
+  "homepage": "https://github.com/venkatsarvesh/pr-code-coverage-report-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "fs": "0.0.1-security",
+    "lcov-parse": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
