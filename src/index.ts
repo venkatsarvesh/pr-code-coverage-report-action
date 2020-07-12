@@ -1,6 +1,5 @@
-import { promises as fs } from "fs"
-import core from "@actions/core"
-import { GitHub, context } from "@actions/github"
+import { promises as fs } from "fs";
+import * as core  from "@actions/core";
 
 /* import { parse } from "./lcov"
 import { diff } from "./comment" */

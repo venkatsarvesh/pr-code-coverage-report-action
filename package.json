@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "pack": "ncc build lib/index.js",
+    "all": "npm run build && npm run pack"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.6"
   }
 }
