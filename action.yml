@@ -1,7 +1,7 @@
 name: 'PR Code Coverage Report Action'
 description: 'PR Code Coverage Report Action'
 inputs:
-  repo-token:
+  github-token:
     description: "The GITHUB_TOKEN secret"
     required: true
 runs:
