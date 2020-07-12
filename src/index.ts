@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import * as core  from "@actions/core";
+import * as core from "@actions/core";
 
 /* import { parse } from "./lcov"
 import { diff } from "./comment" */
@@ -10,12 +10,25 @@ async function main() {
     const lcovFile = core.getInput("lcov-file") || "./coverage/lcov.info"
     const baseFile = core.getInput("lcov-base") */
 
-    let lcovFile = "./lcov.info";
+    const filesList = fs.readdir('.')
+        .then(response => {
+            if (!response) {
+                console.log(`No files in directory`);
+                return
+            } else {
+                response.forEach(f => {
+                    console.log(f);
+                });
+            }
+        })
+        .catch(err => null);
+
+    /* let lcovFile = "./lcov.info";
     const raw = await fs.readFile(lcovFile, "utf-8").catch(err => null)
     if (!raw) {
         console.log(`No coverage report found at '${lcovFile}', exiting...`)
         return
-    }
+    } */
     /* 
         const baseRaw =
             baseFile && (await fs.readFile(baseFile, "utf-8").catch(err => null))
