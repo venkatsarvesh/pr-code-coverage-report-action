@@ -34,7 +34,7 @@ jobs:
   task-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: venkatsarvesh/pr-code-coverage-report-action@master
+      - uses: venkatsarvesh/pr-code-coverage-report-action@v1.0.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
 ```
